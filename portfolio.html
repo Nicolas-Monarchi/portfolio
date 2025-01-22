@@ -1,0 +1,89 @@
+<!-- /mnt/data/portfolio.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="secao-intro"> <!-- Minha Apresentação -->
+        <img src="assets/Minha_foto.jpg" alt="Sua Foto" class="foto-perfil">
+        <h1>Nícolas Monarchi Vieira</h1>
+        <p class="descricao-breve">Olá! Eu sou Nícolas Monarchi Vieira, técnico em Desenvolvimento de Sistemas. Sou uma pessoa criativa e multifacetada, com experiência em tecnologia e programação, incluindo o desenvolvimento de sites e soluções simples de criptografia. Além disso, possuo um perfil estratégico e analítico.</p>
+        <a href="assets/Currículo Nicolas Monarchi Vieira.pdf" download class="baixar-curriculo">Baixar Currículo</a>
+    </header>
+
+    <main class="projetos">
+        <section class="coluna"> <!-- 1° Coluna -->
+            <div class="cartao">
+                <img src="projetos/projeto1/Condominio.jpg" alt="Projeto 1">
+                <h2>Banco de dados-Condomínio</h2>
+                <p>Banco de dados de um condomínio fictício com informações diversas.</p>
+                <button class="abrir-detalhes" data-id="1">Detalhes</button>
+            </div>
+            <div class="cartao">
+                <img src="projetos/projeto2/criptografia.png" alt="Projeto 2">
+                <h2>criptografia</h2>
+                <p>Programa que realiza criptografia utilizando a Cifra de César.</p>
+                <button class="abrir-detalhes" data-id="2">Detalhes</button>
+            </div>
+            <div class="cartao">
+                <img src="projetos/projeto6/permissões.jpg" alt="Projeto 6">
+                <h2>APP - permissões</h2>
+                <p>Função de pedir permissão para acessar documetos.</p>
+                <button class="abrir-detalhes" data-id="6">Detalhes</button>
+            </div>
+        </section>
+        <section class="coluna"> <!-- 2° Coluna -->
+            <div class="cartao">
+                <img src="projetos/projeto3/bacteriofago.jpg" alt="Projeto 3">
+                <h2>Simulação do combate de superbacterias com Fagos</h2>
+                <p>Simulação dos fagos como medicamento para as superbacterias.</p>
+                <button class="abrir-detalhes" data-id="3">Detalhes</button>
+            </div>
+            <div class="cartao">
+                <img src="projetos/projeto7/luximetro.jpg" alt="Projeto 7">
+                <h2>APP - luximetro</h2>
+                <p>APP que mede a luz do ambiente.</p>
+                <button class="abrir-detalhes" data-id="7">Detalhes</button>
+            </div>
+            <div class="cartao">
+                <img src="projetos/projeto8/compartilhar.png" alt="Projeto 8">
+                <h2>APP - compartilhar</h2>
+                <p>APP que é possivel corpartilhar algo.</p>
+                <button class="abrir-detalhes" data-id="8">Detalhes</button>
+            </div>
+        </section>
+        <section class="coluna"> <!-- 3° Coluna -->
+            <div class="cartao">
+                <img src="projetos/projeto4/bateria.png" alt="Projeto 4">
+                <h2>APP - bateria</h2>
+                <p>APP que informa a Bateria atual do dispositivo.</p>
+                <button class="abrir-detalhes" data-id="4">Detalhes</button>
+            </div>
+            <div class="cartao">
+                <img src="projetos/projeto5/localização.jpg" alt="Projeto 5">
+                <h2>APP - localização</h2>
+                <p>APP que mostra sua localização atual.</p>
+                <button class="abrir-detalhes" data-id="5">Detalhes</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="modal-detalhes">
+        <div class="modal-content">
+            <span class="fechar-modal">&times;</span>
+            <h2 id="titulo-projeto"></h2>
+            <img id="imagem-projeto" alt="">
+            <p id="descricao-projeto"></p>
+            <p id="tipo-projeto"></p>
+            <p id="data-projeto"></p>
+            <a id="link-download" href="#" download>Baixar Arquivo</a>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

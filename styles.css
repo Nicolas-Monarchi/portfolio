@@ -1,0 +1,197 @@
+/* /mnt/data/styles.css */
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Cabeçalho */
+.secao-intro {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #005f99, #00aaff);
+    color: white;
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.baixar-curriculo {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #005f99;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.baixar-curriculo:hover {
+    background-color: #005f99;
+    color: white;
+}
+
+/* Seção de Projetos */
+.projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 10px;
+}
+
+/* Cartões */
+.cartao {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    margin: 7px;
+}
+
+.cartao img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cartao h2 {
+    margin: 10px 0;
+    color: #005f99;
+}
+
+.cartao p {
+    padding: 0 10px;
+    color: #666;
+}
+
+.cartao .abrir-detalhes {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: #005f99;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cartao .abrir-detalhes:hover {
+    background-color: #004266;
+}
+
+.cartao:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    border: 2px solid #005f99;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #005f99;
+}
+
+.fechar-modal:hover {
+    color: red;
+}
+
+#imagem-projeto {
+    width: 100%; /* Ajusta a largura */
+    max-width: 500px;
+    aspect-ratio: 16 / 9; /* Define a proporção da imagem (exemplo 16:9) */
+    object-fit: cover; /* Cobre o espaço disponível mantendo proporções */
+    display: block;
+    margin: 0 auto; 
+}
+
+
+@media (max-width: 768px) {
+    #imagem-projeto {
+        width: 90%; /* Ajusta a imagem para caber em telas pequenas */
+        max-width: 90%; /* Remove limites grandes */
+    }
+
+    
+        .modal-content {
+            width: 95%; /* O modal também se ajusta em dispositivos menores */
+            padding: 15px; /* Reduz o espaçamento interno */
+        }
+    /* Empilhar os cartões no celular */
+    .projetos {
+        flex-direction: column;
+        gap: 15px; /* Espaçamento menor no celular */
+    }
+
+    /* Ajustar a largura dos cartões */
+    .cartao {
+        margin: 10px auto; /* Centraliza os cartões */
+        max-width: 90%; /* Largura adaptada para o celular */
+    }
+
+    /* Reduzir o espaçamento no cabeçalho */
+    .secao-intro {
+        padding: 15px;
+    }
+
+    /* Ajustar tamanho das fontes */
+    body {
+        font-size: 14px;
+    }
+
+    /* Melhorar botões */
+    .baixar-curriculo,
+    .cartao .abrir-detalhes {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
